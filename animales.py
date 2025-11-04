@@ -18,22 +18,10 @@ class Animales_Domesticos(Animal): # (Nota: Quité la tilde, es mejor evitar ace
         # self.es_domestico = True 
 
 class Perro(Animales_Domesticos):
-    """
-    Clase específica. Solo necesita definir sus propios valores
-    y pasarlos hacia "arriba" (a Animales_Domesticos).
-    """
+    
     def __init__(self):
         # Pasa los valores "Perro" y "guau guau"
         # a su clase padre (Animales_Domesticos)
         super().__init__("Perro", "guau guau")
 
-# --- Cómo usarlo ---
-
-# 1. Creamos la instancia
-mi_perro = Perro()
-
-# 2. Imprimimos sus atributos (que se guardaron en la clase Animal)
-print(f"Soy un {mi_perro.nombre} y mi sonido es '{mi_perro.sonido}'")
-
-# Si imprimes el objeto solo, no verás los atributos:
-# print(mi_perro)  # Esto solo mostrará algo como <__main__.Perro object at ...>
+class 
