@@ -12,25 +12,25 @@ class Leon (AnimalSalvaje):
         self.caracteristica = caracteristica
         self.ubicacion = ubicacion
 
-class mono (AnimalSalvaje):
+class Mono (AnimalSalvaje):
     def __init__(self, nombre, caracteristica="Muy jugueton", ubicacion="selva"):
         super().__init__(nombre, "U u a a")
         self.caracteristica = caracteristica
         self.ubicacion = ubicacion
 
-class lobo (AnimalSalvaje):
+class Lobo (AnimalSalvaje):
     def __init__(self, nombre, caracteristica="Cazador en manada", ubicacion="montaña"):
         super().__init__(nombre, "Auuuuuuuuuuuuuuu")    
         self.caracteristica = caracteristica
         self.ubicacion = ubicacion
 
-class elefante (AnimalSalvaje):
+class Elefante (AnimalSalvaje):
     def __init__(self, nombre, caracteristica="El animal terrestre mas grande", ubicacion="sabana"):
         super().__init__(nombre, "Patum patum patum")
         self.caracteristica = caracteristica
         self.ubicacion = ubicacion
 
-class hiena (AnimalSalvaje):
+class Hiena (AnimalSalvaje):
     def __init__(self, nombre, caracteristica="Risa siniestra", ubicacion="bosque"):
         super().__init__(nombre, "Auuuuuuuuuuuuuuuuuu")
         self.caracteristica = caracteristica

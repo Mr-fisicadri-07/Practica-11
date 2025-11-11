@@ -1,32 +1,31 @@
 import random
-from animales_Jorge import (Vaca, Cerdo, Oveja, Gallo, Cabra)
-from animales_andrea import (Delfin, Tiburon, Pulpo, Medusa, PezPayaso, CaballitoDeMar, EstrellaDeMar)
-from animales_adrian import (Perro, Gato, Hamster, Periquito, Nemo)
-from animale_marco import (Leon, mono, lobo, elefante, hiena)
-# --- 4. CREAR LA "POBLACIÓN" DE ANIMALES ---
+from animales_jorge import Vaca, Cerdo, Oveja, Gallo, Cabra
+from animales_andrea import Delfin, Tiburon, Pulpo, Medusa, PezGlobo, CaballitoDeMar, EstrellaDeMar
+from animales_adrian import Perro, Gato, Hamster, Periquito, Nemo
+from animales_marco import Leon, Mono, Lobo, Elefante, Hiena
+
 # Creamos instancias de cada animal para que el juego pueda elegirlas.
 # Usamos el tipo de animal como su nombre para que el juego funcione.
 
 poblacion_total = [
     # Domésticos
-    Perro("Perro"), Gato("Gato"), Hamster("Hamster"), Periquito("Periquito"), Nemo("Pez Doméstico"),
+    Perro("Perro"), Gato("Gato"), Hamster("Hamster"), Periquito("Periquito"), Nemo("Nemo"),
     # Granja
     Vaca("Vaca"), Cerdo("Cerdo"), Oveja("Oveja"), Gallo("Gallo"), Cabra("Cabra"),
     # Marinos
-    Delfin("Delfín"), Tiburon("Tiburón"), Pulpo("Pulpo"), PezPayaso("Pez Payaso"),Medusa("Medusa"), CaballitoDeMar("Caballito de Mar"), EstrellaDeMar("Estrella de Mar"),
+    Delfin("Delfín"), Tiburon("Tiburón"), Pulpo("Pulpo"), PezGlobo("Pez Globo"),Medusa("Medusa"), CaballitoDeMar("Caballito de Mar"), EstrellaDeMar("Estrella de Mar"),
     # Salvajes
-    Leon("Leon"), mono("Mono"), lobo("Lobo"), elefante("Elefante"), hiena("Hiena")
+    Leon("León"), Mono("Mono"), Lobo("Lobo"), Elefante("Elefante"), Hiena("Hiena")
 ]
 
 
-# --- 5. LÓGICA DEL JUEGO DE OPCIONES MÚLTIPLES ---
+# --- LÓGICA DEL JUEGO DE OPCIONES MÚLTIPLES ---
 
-print("============================================")
+print("=" * 30)
 print("  JUEGO: ¿QUÉ ANIMAL HACE ESTE SONIDO?  ")
-print("============================================")
+print("=" * 30)
 
 # 1. Elegir 3 animales únicos al azar de la población
-#    random.sample() es perfecto para esto, ¡no coge repetidos!
 opciones = random.sample(poblacion_total, 3)
 
 # 2. De esos 3, elegimos 1 para que sea la respuesta correcta
@@ -44,7 +43,6 @@ print("\n¿Cuál de estos animales crees que es?\n")
 random.shuffle(opciones)
 
 # 6. Mostramos las opciones (A, B, C) y guardamos cuál es cuál
-#    Usamos un diccionario para rastrear la respuesta
 mapa_de_opciones = {}
 letras = ['A', 'B', 'C']
 
@@ -56,7 +54,7 @@ for i in range(3):
     mapa_de_opciones[letra] = nombre_animal_opcion # Ej: {'A': 'Perro'}
 
 # 7. Pedimos la respuesta al usuario
-print("--------------------------------------------")
+print("-" * 30)
 respuesta_usuario = input("Elige A, B, o C: ").upper() # .upper() para A, B, C
 
 # 8. Comprobamos la respuesta
