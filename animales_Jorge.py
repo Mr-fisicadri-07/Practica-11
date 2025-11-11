@@ -1,8 +1,4 @@
-class Animal:
-    """Clase base que almacena el nombre y el sonido."""
-    def __init__(self, nombre, sonido):
-        self.nombre = nombre
-        self.sonido = sonido
+from animales import Animal
 
 # (Nota: La convención sugiere 'AnimalesGranja' como nombre)
 class animales_granja(Animal):
